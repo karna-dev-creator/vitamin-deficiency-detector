@@ -1,0 +1,48 @@
+/* ✅ Centered container only for forms (login, register) */
+.form-container {
+  max-width: 600px;
+  margin: 4rem auto;
+  padding: 2rem;
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+/* ✅ General title style */
+.title {
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin-bottom: 2rem;
+}
+
+/* ✅ Unified navbar styling */
+.nav-bar {
+  background-color: #f4f5f7;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+}
+
+/* ✅ Navbar links */
+.nav-bar nav a,
+.nav-links a {
+  margin-left: 1rem;
+  text-decoration: none;
+  color: white;
+  font-weight: 500;
+}
+
+.nav-bar nav a:hover,
+.nav-links a:hover {
+  text-decoration: underline;
+}
+
+/* ✅ Navbar app title */
+.app-title {
+  margin: 0;
+  font-size: 1.5rem;
+  color: #161616;
+}

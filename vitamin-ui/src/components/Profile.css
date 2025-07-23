@@ -1,0 +1,61 @@
+.profile-container {
+  max-width: 720px;
+  margin: 3rem auto;
+  padding: 2rem;
+  background-color: #f4f4f4;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+  animation: fadeIn 0.8s ease-out forwards;
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+.profile-container.fade-in {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.profile-container h2 {
+  text-align: center;
+  font-weight: 600;
+}
+
+.form-row {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.form-row .cds--text-input-wrapper {
+  flex: 1;
+}
+
+/* Style Radio buttons group spacing */
+.cds--radio-button-group {
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+
+/* Style for Carbon Select dropdown */
+.cds--select {
+  margin-top: 1.5rem;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(25px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Optional: mobile responsiveness */
+@media (max-width: 768px) {
+  .form-row {
+    flex-direction: column;
+  }
+}

@@ -1,0 +1,153 @@
+.predict-wrapper {
+  background-color: #f4f7fb;
+  min-height: 100vh;
+  padding: 3rem 1.5rem;
+}
+
+.predict-container {
+  display: flex;
+  justify-content: center;
+}
+
+.predict-content {
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  max-width: 768px;
+  width: 100%;
+}
+
+.title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #0f62fe;
+  margin-bottom: 0.5rem;
+  text-align: center;
+}
+
+.subtitle {
+  font-size: 1.125rem;
+  color: #525252;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.step-indicator {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+  font-weight: 600;
+  color: #8d8d8d;
+}
+
+.step-indicator .active {
+  color: #0f62fe;
+}
+
+.upload-instruction {
+  font-style: italic;
+  font-size: 0.9rem;
+  color: #6f6f6f;
+  text-align: center;
+}
+
+.upload-form {
+  margin-top: 1rem;
+}
+
+.image-preview {
+  margin: 1rem auto;
+  display: block;
+  max-width: 200px;
+  border-radius: 8px;
+}
+
+.button-row {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.result-box {
+  margin-top: 1rem;
+}
+
+.predict-notification {
+  margin-bottom: 1.5rem;
+}
+
+.spinner-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  background-color: rgba(255, 255, 255, 0.8);
+  z-index: 9999;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.spinner-box {
+  text-align: center;
+}
+
+.spinner-text {
+  margin-top: 12px;
+  font-size: 1.1rem;
+  color: #333;
+  font-weight: 500;
+}
+.uploader-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.uploader-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 1rem 0;
+}
+
+.uploader-container .bx--file__drop-container {
+  width: 100%;
+  max-width: 400px;
+  border: 2px dashed #8d8d8d;
+  background-color: #f4f4f4;
+  padding: 1.5rem;
+  border-radius: 8px;
+  text-align: center;
+  transition: border 0.3s;
+}
+
+.uploader-container .bx--file__drop-container:hover {
+  border-color: #0f62fe;
+}
+
+@media (max-width: 768px) {
+  .uploader-container .bx--file__drop-container {
+    max-width: 90%;
+    padding: 1rem;
+  }
+}
+.upload-form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* ensures child elements center */
+  margin-top: 1rem;
+}
+.know-more-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+}

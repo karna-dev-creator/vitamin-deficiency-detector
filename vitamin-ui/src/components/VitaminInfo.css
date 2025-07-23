@@ -1,0 +1,109 @@
+/* src/pages/VitaminInfo.css */
+
+.vitamin-info-container {
+  padding: 2rem;
+  background-color: #f4f4f4;
+  min-height: 100vh;
+}
+
+.vitamin-info-container h1 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+  color: #0f62fe;
+}
+
+.vitamin-info-container .subtitle {
+  font-size: 1.125rem;
+  margin-bottom: 2rem;
+  color: #525252;
+}
+
+.vitamin-info-container section {
+  background: #ffffff;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  border-left: 5px solid #0f62fe;
+  border-radius: 4px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.vitamin-info-container section h3 {
+  margin-bottom: 0.75rem;
+  color: #393939;
+  font-size: 1.2rem;
+}
+
+.vitamin-info-container section p,
+.vitamin-info-container section ul {
+  color: #525252;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.vitamin-info-container ul {
+  padding-left: 1.25rem;
+  margin: 0;
+}
+
+.vitamin-info-container li {
+  margin-bottom: 0.5rem;
+}
+
+.vitamin-info-container .disclaimer {
+  background-color: #fffbe6;
+  border-left-color: #ff832b;
+}
+
+.vitamin-info-error {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 80vh;
+  text-align: center;
+  padding: 1rem;
+}
+
+.vitamin-info-error h3 {
+  color: #da1e28;
+  margin-bottom: 1rem;
+}
+
+.vitamin-info-container .bx--btn--ghost {
+  margin-bottom: 2rem;
+}
+
+/* -------------------------- */
+/* 📱 Responsive for mobiles  */
+/* -------------------------- */
+@media (max-width: 768px) {
+  .vitamin-info-container {
+    padding: 1rem;
+  }
+
+  .vitamin-info-container h1 {
+    font-size: 1.5rem;
+  }
+
+  .vitamin-info-container .subtitle {
+    font-size: 1rem;
+  }
+
+  .vitamin-info-container section {
+    padding: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .vitamin-info-container section h3 {
+    font-size: 1.05rem;
+  }
+
+  .vitamin-info-container section p,
+  .vitamin-info-container section ul {
+    font-size: 0.95rem;
+  }
+
+  .vitamin-info-error {
+    padding: 0.5rem;
+  }
+}

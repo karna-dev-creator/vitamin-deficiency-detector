@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Vitamin Deficiency Prediction Upload</title>
+</head>
+<body>
+  <h2>Upload Image for Prediction</h2>
+  <form action="http://localhost:5000/predict" method="post" enctype="multipart/form-data">
+    <label>Email:</label>
+    <input type="email" name="email" required><br><br>
+    <label>Image:</label>
+    <input type="file" name="file" accept=".jpg,.jpeg,.png" required><br><br>
+    <button type="submit">Predict</button>
+  </form>
+</body>
+</html>

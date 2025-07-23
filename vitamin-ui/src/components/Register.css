@@ -1,0 +1,75 @@
+.register-container {
+  padding: 4rem 2rem;
+  background-color: #ffffff;
+  min-height: 100vh;
+}
+
+.register-form {
+  max-width: 960px;
+  margin: auto;
+  display: grid;
+  gap: 1.5rem;
+}
+
+.two-column {
+  display: flex;
+  gap: 1.5rem;
+}
+
+@media (max-width: 768px) {
+  .two-column {
+    flex-direction: column;
+  }
+}
+
+/* For Age, Height, Weight */
+.form-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 1rem;
+}
+
+.error-msg {
+  color: red;
+  font-size: 0.875rem;
+  margin: 0.25rem 0 1rem;
+}
+.password-wrapper {
+  position: relative;
+  margin-bottom: 1.5rem;
+}
+
+.password-wrapper .icon-button {
+  position: absolute;
+  top: 55%;
+  right: 1rem;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+/* .confirm-password-wrapper {
+  position: relative;
+  margin-bottom: 1.5rem;
+}
+
+.confirm-password-wrapper .icon-button {
+  position: absolute;
+  top: 55%;
+  right: 1rem;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+} */
+.two-column {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.two-column > div {
+  flex: 1;
+}
+

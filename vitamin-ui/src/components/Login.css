@@ -1,0 +1,72 @@
+.login-container {
+  display: flex;
+  min-height: 100vh;
+  background-color: #fff;
+  padding: 2rem;
+  animation: fadeIn 0.8s ease-in-out;
+}
+
+.login-image {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-right: 2rem;
+}
+
+.login-image img {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+}
+
+.login-form {
+  flex: 1;
+  max-width: 500px;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin: auto;
+}
+
+.password-wrapper {
+  position: relative;
+}
+
+.password-wrapper .icon-button {
+  position: absolute;
+  top: 70%;
+  right: 1rem;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+
+.forgot-password {
+  text-align: right;
+  font-size: 0.85rem;
+  margin-top: -0.5rem;
+  margin-bottom: 1rem;
+}
+
+.forgot-password a {
+  color: #0f62fe;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.fade-in {
+  animation: fadeIn 1s ease-in-out forwards;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.login-spinner .bx--loading__svg {
+  stroke: white;
+  width: 1rem;
+  height: 1rem;
+}

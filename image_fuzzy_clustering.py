@@ -153,35 +153,39 @@ def get_pdf(y, means, cov, pis, k):
     pdf = np.sum(pdf_arr)
     return pdf
 
-def plot_cluster_img(filename,k):
-    # Visualize demo images
-    # filename='img//L7.jpg'
-    iter_n=10
-    small_img, orig_img = read_img(filename = filename, size = (0.5, 0.5))
+def plot_cluster_img(filename, k, output_path=None):
+    iter_n = 10
+    small_img, orig_img = read_img(filename=filename, size=(0.5, 0.5))
     x, y, z = orig_img.shape
-    # Store img 
+
+    # Save original image (optional)
     plt.figure()
     plt.axis("off")
     plt.imshow(small_img)
     plt.title('Original Image')
     plt.tight_layout()
-    picture_path = os.path.join(current_app.root_path, 'static/images', 'orig_image.jpg')
-    plt.savefig(picture_path, transparent=True, bbox_inches='tight')
-    print("Saved original image")
+    original_path = os.path.join(current_app.root_path, 'static/images', 'orig_image.jpg')
+    plt.savefig(original_path, transparent=True, bbox_inches='tight')
+    print("✅ Saved original image")
 
-    
     try:
         img = flatten_img(orig_img)
-        labels, means, cov, pis, likelihood_arr, means_arr = EM_cluster(img, int(k),error = 0.001, iter_n=iter_n)
+        labels, means, cov, pis, likelihood_arr, means_arr = EM_cluster(img, int(k), error=0.001, iter_n=iter_n)
         em_img = recover_img(means[labels], X=x, Y=y, Z=z)
+
+        # Save clustered image
         plt.figure()
         plt.axis("off")
         plt.imshow(em_img)
-        plt.title(str(k)+' Cluster')
+        plt.title(f"{k} Cluster")
         plt.tight_layout()
-        picture_path = os.path.join(current_app.root_path, 'static/images', 'em_image.jpg')
-        plt.savefig(picture_path, transparent=True, bbox_inches='tight')
-        print("Saved clustered image")
-        
+
+        # Use provided output_path or fallback
+        if output_path is None:
+            output_path = os.path.join(current_app.root_path, 'static/images', 'em_image.jpg')
+
+        plt.savefig(output_path, transparent=True, bbox_inches='tight')
+        print(f"✅ Saved clustered image: {output_path}")
+
     except Exception as ex:
-        print(ex)
+        print("❌ Error during clustering:", ex)
